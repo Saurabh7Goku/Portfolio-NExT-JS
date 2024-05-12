@@ -6,7 +6,7 @@ import InsightsGrid2 from '@/components/ProjectInsightGrid2';
 import { useRouter } from 'next/router';
 import TransitionEffect from '@/components/TransitionEffect';
 
-function demo_project1() {
+function DemoProject2() {
     const router = useRouter();
 
     const navigateToPreviousPage = () => {
@@ -75,4 +75,4 @@ function demo_project1() {
     )
 }
 
-export default demo_project1
+export default DemoProject2

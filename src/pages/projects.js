@@ -4,30 +4,33 @@ import AnimatedText from '@/components/AnimatedText';
 import Layout from '@/components/Layout';
 import { motion } from 'framer-motion';
 import TransitionEffect from '@/components/TransitionEffect';
+import Image from 'next/image';
+
 
 const projectsData = [
     {
         id: 1,
-        title: 'eCommerce Analysis - PowerBI',
-        category: 'Data Analyst',
-        tag: 'data_analyst',
-        image: '/images/projects/ecommerce.png',
-        description: 'This is a project build using PowerBI and SQL. I used SQL for data filtering and cleaning, where as I used PowerBi for the Dashboard Making for better Data visualization and understanding on the key notes that may or may not affect the Pizza Sales in the Pizza Hut. The Data Set which is used to build this analysis is taken from the open source data hub',
-        techStack: 'Tech Stack: Data Analysis, SQL, PowerBI',
-        link: '/demo_project2',
-        video: ''
-    },
-    {
-        id: 2,
         title: 'Pizza Sales Analysis - PowerBI',
         category: 'Data Analyst',
         tag: 'data_analyst',
         image: '/images/projects/sales.png',
         description: "Used complex parameters to drill down in worksheet and customization using filters and slicers. Created connections, joined new tables, calculations to manipulate data and enabled user driven parameters for visualizations.Used different types of customized visualization (bar charts, pie chart, donut chart, clustered bar chart etc)",
         techStack: 'Tech Stack: MySQL, Data Analysis, PowerBI',
-        link: '/demo_project1',
+        link: '/DemoProject1',
         video: ''
     },
+    {
+        id: 2,
+        title: 'eCommerce Analysis - PowerBI',
+        category: 'Data Analyst',
+        tag: 'data_analyst',
+        image: '/images/projects/ecommerce.png',
+        description: 'This is a project build using PowerBI and SQL. I used SQL for data filtering and cleaning, where as I used PowerBi for the Dashboard Making for better Data visualization and understanding on the key notes that may or may not affect the Pizza Sales in the Pizza Hut. The Data Set which is used to build this analysis is taken from the open source data hub',
+        techStack: 'Tech Stack: Data Analysis, SQL, PowerBI',
+        link: '/DemoProject2',
+        video: ''
+    },
+
     {
         id: 3,
         title: 'Cancer Classification ',
@@ -147,7 +150,7 @@ const Projects = () => {
                             {filteredProjects.slice(0, 8).map(project => (
                                 <div key={project.id} className="project-container bg-gray-100 p-4 m-2 rounded-[1rem] shadow-lg relative">
                                     <div className=' project-container absolute top-0 -right-3 -z-10 w-[102%] h-[103%]  rounded-[2rem] bg-dark' />
-                                    <img className='h-[70%] rounded-[1rem]  sm:h-[55%] md:h-[55%] lg:h-[60%]' src={project.image} alt={project.title} />
+                                    <Image className='h-[70%] rounded-[1rem]  sm:h-[55%] md:h-[55%] lg:h-[60%]' src={project.image} alt={project.title} width={400} height={300} />
                                     <h4 className="text-lg md:text-lg sm:text-lg xs:text-sm font-semibold mb-2 flex flex-col items-center">{project.title}</h4>
                                     <p className="text-sm mb-2">Category: {project.category}</p>
                                     <div className="flex justify-evenly mb-2">
