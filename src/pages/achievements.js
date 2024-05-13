@@ -66,6 +66,10 @@ const Achievement = ({ img, title, date, link }) => {
 }
 const awards = [
     {
+        image: '/images/articles/hackathon.jpg',
+        title: 'Smart India Hackathon (Violence Detection)'
+    },
+    {
         image: '/images/articles/tensorflowDev.png',
         title: 'Tensorflow Developer by Udemy',
     },
