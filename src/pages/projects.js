@@ -145,7 +145,7 @@ const Projects = () => {
                             initial={{ opacity: 0, x: 120 }}
                             animate={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.5 }}
-                            className="grid grid-cols-3 gap-8 pt-10 w-full xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2"
+                            className="grid grid-cols-3 gap-8 pt-10 w-full xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 "
                         >
                             {filteredProjects.slice(0, 8).map(project => (
                                 <div key={project.id} className="project-container bg-gray-100 p-4 m-2 rounded-[1rem] shadow-lg relative">
@@ -161,41 +161,46 @@ const Projects = () => {
                                     </div>
                                 </div>
                             ))}
+                            {/* Empty grid items to center the remaining two */}
+                            <div className="invisible"></div>
+                            <div className="invisible"></div>
                         </motion.div>
                     </div>
                 </Layout>
             </main>
             {/* Modal for displaying project details */}
-            {selectedProject && (
-                <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50">
-                    <div className="max-w-3xl w-full bg-white p-8 rounded-lg relative">
-                        <button className="absolute top-2 right-2 text-gray-500 hover:text-gray-700" onClick={handleCloseModal}>
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-                            </svg>
-                        </button>
-                        <h2 className="text-xl font-bold mb-4">{selectedProject.title}</h2>
-                        {selectedProject && selectedProject.video ? (
-                            <div className="video-container relative items-center" style={{ paddingBottom: selectedProject && selectedProject.aspectRatio ? `${(1 / selectedProject.aspectRatio) * 100}%` : '56.25%' }}>
-                                <video controls src={selectedProject.video} className="absolute inset-0 w-full h-full object-cover rounded-lg" />
-                            </div>
-                        ) : (
-                            <h2 className='flex flex-col items-center font-bold text-sm py-4' >No Demo Videos available. Visit the Deployed link,<p className='text-red-600'>Click Go live</p></h2>
-                        )}
+            {selectedProject &&
+                (
+                    <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-black bg-opacity-50 z-50">
+                        <div className="max-w-3xl w-full max-h-screen bg-white p-8 rounded-lg relative overflow-y-auto">
+                            <button className="absolute top-2 right-2 text-gray-500 hover:text-gray-700" onClick={handleCloseModal}>
+                                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+                                </svg>
+                            </button>
+                            <h2 className="text-xl font-bold mb-4">{selectedProject.title}</h2>
+                            {selectedProject && selectedProject.video ? (
+                                <div className="video-container relative items-center" style={{ paddingBottom: selectedProject && selectedProject.aspectRatio ? `${(1 / selectedProject.aspectRatio) * 100}%` : '56.25%' }}>
+                                    <video controls src={selectedProject.video} className="absolute inset-0 w-full h-full object-cover rounded-lg" />
+                                </div>
+                            ) : (
+                                <h2 className='flex flex-col items-center font-bold text-sm py-4' >No Demo Videos available. Visit the Deployed link,<p className='text-red-600'>Click Go live</p></h2>
+                            )}
 
-                        <ul className="list-disc pl-4 mb-4 mt-2">
-                            {selectedProject.description.split('.').map((sentence, index) => (
-                                <li key={index}>{sentence}</li>
-                            ))}
-                        </ul>
+                            <ul className="list-disc pl-4 mb-4 mt-2">
+                                {selectedProject.description.split('.').map((sentence, index) => (
+                                    <li key={index}>{sentence}</li>
+                                ))}
+                            </ul>
 
-                        <p className="text-xs text-blue-700 flex flex-col items-center justify-center font-bold">{selectedProject.techStack}</p>
-                        {selectedProject.link && (
-                            <a href={selectedProject.link} className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Go Live</a>
-                        )}
-                    </div>
-                </div >
-            )}
+                            <p className="text-xs text-blue-700 flex flex-col items-center justify-center font-bold py-2">{selectedProject.techStack}</p>
+                            {selectedProject.link && (
+                                <a href={selectedProject.link} className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Go Live</a>
+                            )}
+                        </div>
+                    </div >
+                )
+            }
         </>
     )
 }
