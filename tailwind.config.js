@@ -6,6 +6,8 @@ module.exports = {
     // Or if using `src` directory:
     "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  // mode: 'jit',
+  // purge: ['./pages/**/*.{js,ts,jsx,tsx}', './components/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
       fontFamily: {
@@ -27,7 +29,7 @@ module.exports = {
         circularLightSm: 'repeating-radial-gradient(rgba(0, 0, 0, 0.4), 2px,#f5f5f5 5px,#f5f5f5 40px);'
       }
     },
-    
+
     screens: {
       "2xl": { max: "1535px" },
       // => @media (max-width: 1535px) { ... }

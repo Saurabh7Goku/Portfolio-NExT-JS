@@ -10,6 +10,7 @@ import u14 from '../../public/images/articles/football-14.png';
 import u17 from '../../public/images/articles/football-17.png';
 import Rajya from '../../public/images/articles/RajyaPuraskar.png';
 import tritiya from '../../public/images/articles/trityaSopan.png';
+import TransitionEffect from '@/components/TransitionEffect';
 
 const FramerImage = motion(Image);
 
@@ -117,6 +118,7 @@ const Achievements = () => {
                 </title>
                 <meta name='description' content='any description' />
             </Head>
+            <TransitionEffect />
             <main>
                 <Layout>
                     <AnimatedText text={'Achievement Gallery'} className='mb-8 xs:text-2xl sm:text-3xl md:text-4xl' />
