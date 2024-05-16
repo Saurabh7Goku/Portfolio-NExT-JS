@@ -138,15 +138,12 @@ const projectsData = [
         category: 'Data Analysis',
         tag: 'data_analyst',
         image: '/images/projects/billboards.png',
-        description: "This is a Artificial Intelligence Application which will answer to your queries real quick and effortlessly using Large Language Models. We leverage state-of-the-art language models hosted on the Hugging Face Model Hub to power our chat bot. The backend of our Chat Bot is built using Python, a versatile and powerful programming language The user interface of our application is developed using Streamlit",
+        description: "This is a data anlysis of Billboard top-100 charts songs having various music styles from Classic, Rock to Jazz Users can interactively choose a year/genre range they are interested in to get a closer look at subtleties. For each song, I count the number of duplicate lines that appear in the lyrics, This can be used as a rough measure of repetition in the song content, that is the more duplicate lines in the lyrics, the more repetitive a song is. Using the Natural Language Toolkit (NLTK) for Python, I used the VADER model for parsimonious rule-based sentiment analysis of each song's lyrics, Each song was run through a sentiment analyzer and output an object with data about its sentiment",
         techStack: 'Tech Stack: Python, Streamlit, LLM, API, HuggingFace and Huggingface Spaces',
-        link: 'https://huggingface.co/spaces/Saurabhgk18/custome_chatbot',
+        link: 'https://saurabh7goku.github.io/Billboard-Analysis/',
         video: '',
-        code: 'https://saurabh7goku.github.io/Billboard-Analysis/',
+        code: 'https://github.com/Saurabh7Goku/Billboard-Analysis',
     },
-
-
-
 ];
 
 const Projects = () => {
@@ -238,9 +235,9 @@ const Projects = () => {
                             <p className="text-xs text-blue-700 flex flex-col items-center justify-center font-bold py-2">{selectedProject.techStack}</p>
                             <div className='flex flex-row justify-between'>
                                 {selectedProject.link && (
-                                    <a href={selectedProject.link} className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Go Live</a>
+                                    <a href={selectedProject.link} target='_blank' className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Go Live</a>
                                 )}
-                                <a href={selectedProject.link} className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Code Base</a>
+                                <a href={selectedProject.code} target='_blank' className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Code Base</a>
                             </div>
                         </div>
                     </div >
