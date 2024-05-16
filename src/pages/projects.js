@@ -10,17 +10,29 @@ import Image from 'next/image';
 const projectsData = [
     {
         id: 1,
+        title: 'Zomato Business Analysis - PowerBI',
+        category: 'Data Analyst',
+        tag: 'data_analyst',
+        image: '/images/projects/zomato.png',
+        description: "The data used here is sourced from Zomato's comprehensive dataset covering various aspects of food sales across India.This meticulous process yields actionable insights, empowering data-driven decision-making for the company.Used different types of customized visualization (bar charts, pie chart, donut chart, clustered bar chart etc)",
+        techStack: 'Tech Stack: SQL, Data Analysis, PowerBI',
+        link: '/DemoProject3',
+        video: ''
+    },
+
+    {
+        id: 2,
         title: 'Pizza Sales Analysis - PowerBI',
         category: 'Data Analyst',
         tag: 'data_analyst',
         image: '/images/projects/sales.png',
         description: "Used complex parameters to drill down in worksheet and customization using filters and slicers. Created connections, joined new tables, calculations to manipulate data and enabled user driven parameters for visualizations.Used different types of customized visualization (bar charts, pie chart, donut chart, clustered bar chart etc)",
-        techStack: 'Tech Stack: MySQL, Data Analysis, PowerBI',
+        techStack: 'Tech Stack: SQL, Data Analysis, PowerBI',
         link: '/DemoProject1',
         video: ''
     },
     {
-        id: 2,
+        id: 3,
         title: 'eCommerce Analysis - PowerBI',
         category: 'Data Analyst',
         tag: 'data_analyst',
@@ -32,7 +44,7 @@ const projectsData = [
     },
 
     {
-        id: 3,
+        id: 4,
         title: 'Cancer Classification ',
         category: 'Deep Learning',
         tag: 'machine_learning',
@@ -43,7 +55,18 @@ const projectsData = [
         video: 'https://firebasestorage.googleapis.com/v0/b/newtry-d602d.appspot.com/o/cancer_classification.mp4?alt=media&token=567c6522-feec-4ce9-8848-72eb7f978c0c'
     },
     {
-        id: 4,
+        id: 5,
+        title: 'Job Posting Search AGENTIC Model',
+        category: 'SAAS-AI',
+        tag: 'sda',
+        image: '/images/projects/job.png',
+        description: "This is a SAAS Application which searchs job posting when given positons and companies name. The Artificial Intelligence Agent uses Internet to search for all the given position in given companies and return the Job Posting Links. The application is build using React's (Next JS) as Frontend and Python's Flask as Backend Server. It uses Large Language Model like (gpt-4, mixtrl, Gemini etc) and Agents to do the jobs using Custom Tools(like Search Engine - Serper or DuckDuckGO) and Prompt Engineering",
+        techStack: 'Tech Stack: LLMs, Agents, Flask, Prompt Engineering, React NextJS, APIS, Hooks, CrewAI',
+        link: '',
+        video: 'https://firebasestorage.googleapis.com/v0/b/newtry-d602d.appspot.com/o/Job%20Searching%20Agent%20-%20Made%20with%20Clipchamp.mp4?alt=media&token=4e862d09-47d1-4604-b942-66403e7c8f52'
+    },
+    {
+        id: 6,
         title: 'Violence Detection',
         category: 'Machine Learning',
         tag: 'machine_learning',
@@ -55,19 +78,7 @@ const projectsData = [
     },
 
     {
-        id: 5,
-        title: 'Job Posting Search AGENTIC Model',
-        category: 'SAAS-AI',
-        tag: 'sda',
-        image: '/images/projects/jobfind.jpg',
-        description: "This is a SAAS Application which searchs job posting when given positons and companies name. The Artificial Intelligence Agent uses Internet to search for all the given position in given companies and return the Job Posting Links. The application is build using React's (Next JS) as Frontend and Python's Flask as Backend Server. It uses Large Language Model like (gpt-4, mixtrl, Gemini etc) and Agents to do the jobs using Custom Tools(like Search Engine - Serper or DuckDuckGO) and Prompt Engineering",
-        techStack: 'Tech Stack: LLMs, Agents, Flask, Prompt Engineering, React NextJS, APIS, Hooks, CrewAI',
-        link: '',
-        video: 'https://firebasestorage.googleapis.com/v0/b/newtry-d602d.appspot.com/o/Job%20Searching%20Agent%20-%20Made%20with%20Clipchamp.mp4?alt=media&token=4e862d09-47d1-4604-b942-66403e7c8f52'
-    },
-
-    {
-        id: 6,
+        id: 7,
         title: 'Get Nutrition-AI',
         category: 'Artificial Intelligence',
         tag: 'ai',
@@ -79,7 +90,7 @@ const projectsData = [
     },
 
     {
-        id: 7,
+        id: 8,
         title: 'ATS Resume Checker - AI',
         category: 'Artificial Intelligence',
         tag: 'ai',
@@ -91,7 +102,7 @@ const projectsData = [
     },
 
     {
-        id: 8,
+        id: 9,
         title: 'ATS-Resume Scanner App',
         category: 'AI-Software',
         tag: 'sda',
@@ -147,8 +158,8 @@ const Projects = () => {
                             transition={{ duration: 0.5 }}
                             className="grid grid-cols-3 gap-8 pt-10 w-full xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 "
                         >
-                            {filteredProjects.slice(0, 8).map(project => (
-                                <div key={project.id} className="project-container bg-gray-100 p-4 m-2 rounded-[1rem] shadow-lg relative">
+                            {filteredProjects.slice(0, 9).map(project => (
+                                <div key={project.id} className="project-container bg-gray-100 p-4 m-2 rounded-[2rem] relative">
                                     <div className=' project-container absolute top-0 -right-3 -z-10 w-[102%] h-[103%]  rounded-[2rem] bg-dark' />
                                     <Image className='h-[70%] rounded-[1rem]  sm:h-[55%] md:h-[55%] lg:h-[60%]' src={project.image} alt={project.title} width={400} height={300} />
                                     <h4 className="text-lg md:text-lg sm:text-lg xs:text-sm font-semibold mb-2 flex flex-col items-center">{project.title}</h4>

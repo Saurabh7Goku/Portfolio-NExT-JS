@@ -27,7 +27,7 @@ function DemoProject1() {
                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7 7-7"></path>
                             </svg>
                         </button>
-                        <AnimatedText text={'Sales Data Analysis'} className='text-5xl font-bold xs:text-2xl sm:text-2xl md:text-4xl lg:text-6xl' />
+                        <AnimatedText text={'Pizza Sales Data Analysis'} className='text-5xl font-bold xs:text-2xl sm:text-2xl md:text-4xl lg:text-6xl' />
                     </div>
                     <div className='pt-10 grid w-full grid-cols-8 gap-16 lg:grid-cols-8 xl:grid-cols-8 xs:flex xs:flex-col sm:flex sm:flex-col'>
                         <div className='col-span-3 flex-col items-start justify-start xs:w-full sm:w-full'>
@@ -36,7 +36,7 @@ function DemoProject1() {
                             </h2>
                             <ul className='list-disc pl-4 xs:pl-0'>
                                 <li className='font-medium'>
-                                    <span class="material-icons text-blue-600">Dashboard</span> Welcome to eCommerce Sales Data Analysis...
+                                    <span class="material-icons text-blue-600">Dashboard</span> Welcome to Pizza Sales Data Analysis...
                                 </li>
                                 <li className='my-2 font-medium'>
                                     <span class="material-icons text-blue-600">Multiline_chart</span> This is an End-to-End Data Analysis on the Pizza Sales Dataset using Power BI and SSMS (SQL Server Management Studio).
@@ -60,8 +60,9 @@ function DemoProject1() {
 
                         <div className='col-span-5 relative h-max rounded-2xl border-2 border-soild border-dark bg-light p-8'>
                             <div className='absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark' />
-                            <iframe src="https://app.powerbi.com/view?r=eyJrIjoiODI4ZjZiODAtMjFmOC00OWFmLWJjYmQtNDc0Y2U4ZjYwOWZkIiwidCI6ImZjNDc5MTA4LTQ3ODAtNGNlZC05M2IzLWMzZjUyNDg3OTUzMiIsImMiOjh9"
-                                frameBorder="0" width="100%" height="500" />
+                            <iframe title="Sales_Data_analysis" width="100%" height="500" src="https://app.powerbi.com/view?r=eyJrIjoiODI4ZjZiODAtMjFmOC00OWFmLWJjYmQtNDc0Y2U4ZjYwOWZkIiwidCI6ImZjNDc5MTA4LTQ3ODAtNGNlZC05M2IzLWMzZjUyNDg3OTUzMiIsImMiOjh9&pageName=ReportSection"
+                                frameborder="0" allowFullScreen="true">
+                            </iframe>
                         </div>
                     </div>
                     <AnimatedText text={'Insights From The Data Analysis'} className='py-16 text-5xl font-bold xs:text-2xl sm:text-2xl md:text-4xl lg:text-6xl' />
