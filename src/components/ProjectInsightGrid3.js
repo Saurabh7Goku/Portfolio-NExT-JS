@@ -19,22 +19,22 @@ function InsightsGrid3() {
                 <div className="pb-2"> </div>
             </div>
             <div className="p-4 rounded-lg shadow-md bg-white">
-                <h2 className="text-lg font-bold mb-2 text-green-700 capitalize">User Performances</h2>
+                <h2 className="text-lg font-bold mb-2 text-green-700 capitalize">Use&apos;s Performances</h2>
                 <ul className="list-disc pl-4 text-gray-600">
                     <li className='xs:text-sm sm:text-sm  py-2'>
-                        <h3 className="font-semibold xs:text-sm sm:text-sm capitalize">Users Activity:</h3> Total weekly active users currently are 78K producting 301K orders per week.
+                        <h3 className="font-semibold xs:text-sm sm:text-sm capitalize">User&apos;s Activity:</h3> Total weekly active users currently are 78K producting 301K orders per week.
                     </li>
                     <li className='xs:text-sm sm:text-sm'>
                         <h3 className="font-semibold xs:text-sm sm:text-sm capitalize">Customer Counts:</h3> The rate of gaining users is 12K which is very low as compared to losing users which is 33K.
                     </li>
                     <li className='xs:text-sm sm:text-sm'>
-                        <h3 className="font-semibold xs:text-sm sm:text-sm capitalize">Customer by Age:</h3> Zomato has majority of its users from age group of 20 years to 30 years.
+                        <h3 className="font-semibold xs:text-sm sm:text-sm capitalize">Customers by Age:</h3> Zomato has majority of its users from age group of 20 years to 30 years.
                     </li>
                 </ul>
                 <div className="pb-2"> </div>
             </div>
             <div className="p-4 rounded-lg shadow-md bg-white">
-                <h2 className="text-lg font-bold mb-2 text-orange-700 capitalize">User's Involvment</h2>
+                <h2 className="text-lg font-bold mb-2 text-orange-700 capitalize">User&apos;s Involvment</h2>
                 <ul className="list-disc pl-4 text-gray-600">
                     <li className='xs:text-sm sm:text-sm  py-2'>
                         <h3 className="font-semibold xs:text-sm sm:text-sm capitalize">Category:</h3> The User's are divided into 4 categories Student, Employee, Self Employee and House Wifes, where Student shares the majority of Orders by 52.6%.
