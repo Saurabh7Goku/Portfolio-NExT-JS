@@ -37,7 +37,7 @@ function InsightsGrid3() {
                 <h2 className="text-lg font-bold mb-2 text-orange-700 capitalize">User&apos;s Involvment</h2>
                 <ul className="list-disc pl-4 text-gray-600">
                     <li className='xs:text-sm sm:text-sm  py-2'>
-                        <h3 className="font-semibold xs:text-sm sm:text-sm capitalize">Category:</h3> The User's are divided into 4 categories Student, Employee, Self Employee and House Wifes, where Student shares the majority of Orders by 52.6%.
+                        <h3 className="font-semibold xs:text-sm sm:text-sm capitalize">Category:</h3> The User&apos;s are divided into 4 categories Student, Employee, Self Employee and House Wifes, where Student shares the majority of Orders by 52.6%.
                     </li>
                     <li className='xs:text-sm sm:text-sm'>
                         <h3 className="font-semibold xs:text-sm sm:text-sm capitalize">Gender Specific</h3> Males has more orders and contribution on Sales Price with 171.85 K Orders & around &#8377;120 M spending, where females are with 128.71 K Orders & around &#8377;88 M spending.

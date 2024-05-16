@@ -39,7 +39,7 @@ function DemoProject3() {
                                     Welcome to Zomato Food Sales Data Analysis...
                                 </li>
                                 <li className='my-2 font-medium'>
-                                    <span class="material-icons text-blue-600">explore</span> The data used here is sourced from Zomato's comprehensive dataset covering various aspects of food sales across India. This dataset comprises seven tables: Food, Measure, Menu, Orders, RankTable, Restaurant, and Users.
+                                    <span class="material-icons text-blue-600">explore</span> The data used here is sourced from Zomato&apos;s comprehensive dataset covering various aspects of food sales across India. This dataset comprises seven tables: Food, Measure, Menu, Orders, RankTable, Restaurant, and Users.
                                     <br />
                                     <span className="text-blue-600">Food Table contains features like:</span>
                                     <br />
