@@ -17,7 +17,8 @@ const projectsData = [
         description: "The data used here is sourced from Zomato's comprehensive dataset covering various aspects of food sales across India.This meticulous process yields actionable insights, empowering data-driven decision-making for the company.Used different types of customized visualization (bar charts, pie chart, donut chart, clustered bar chart etc)",
         techStack: 'Tech Stack: SQL, Data Analysis, PowerBI',
         link: '/DemoProject3',
-        video: ''
+        video: '',
+        code: 'https://github.com/Saurabh7Goku'
     },
 
     {
@@ -29,7 +30,8 @@ const projectsData = [
         description: "Used complex parameters to drill down in worksheet and customization using filters and slicers. Created connections, joined new tables, calculations to manipulate data and enabled user driven parameters for visualizations.Used different types of customized visualization (bar charts, pie chart, donut chart, clustered bar chart etc)",
         techStack: 'Tech Stack: SQL, Data Analysis, PowerBI',
         link: '/DemoProject1',
-        video: ''
+        video: '',
+        code: 'https://github.com/Saurabh7Goku/Sales_data_analysis'
     },
     {
         id: 3,
@@ -40,7 +42,8 @@ const projectsData = [
         description: 'This is a project build using PowerBI and SQL. I used SQL for data filtering and cleaning, where as I used PowerBi for the Dashboard Making for better Data visualization and understanding on the key notes that may or may not affect the Pizza Sales in the Pizza Hut. The Data Set which is used to build this analysis is taken from the open source data hub',
         techStack: 'Tech Stack: Data Analysis, SQL, PowerBI',
         link: '/DemoProject2',
-        video: ''
+        video: '',
+        code: 'https://github.com/Saurabh7Goku/eCommerceAnalysis'
     },
 
     {
@@ -52,7 +55,8 @@ const projectsData = [
         description: "This is a Deep Learning project based on the Adenocarcinomas, Which occur most commonly in the: bowel around 90% of bowel cancers are adenocarcinomas, which begin in the glandular tissue lining of the bowel. Most breast cancers are adenocarcinomas. They begin in the milk producing glands in the breast. This is an End-to-End Project which includes CI/CD pipeline and development.This project is done using Modular Coding and using Random Forest as ML Algorithm and Flask as Frontend and Backend Server",
         techStack: 'Tech Stack: AWS EC2, S3, ECR, git Actions, MlFLow, DVC, Dagshub',
         link: '',
-        video: 'https://firebasestorage.googleapis.com/v0/b/newtry-d602d.appspot.com/o/cancer_classification.mp4?alt=media&token=567c6522-feec-4ce9-8848-72eb7f978c0c'
+        video: 'https://firebasestorage.googleapis.com/v0/b/newtry-d602d.appspot.com/o/cancer_classification.mp4?alt=media&token=567c6522-feec-4ce9-8848-72eb7f978c0c',
+        code: 'https://github.com/Saurabh7Goku/END_TO_END-Chest-Cancer-Detection-using-MlFLow-DVC'
     },
     {
         id: 5,
@@ -63,7 +67,8 @@ const projectsData = [
         description: "This is a SAAS Application which searchs job posting when given positons and companies name. The Artificial Intelligence Agent uses Internet to search for all the given position in given companies and return the Job Posting Links. The application is build using React's (Next JS) as Frontend and Python's Flask as Backend Server. It uses Large Language Model like (gpt-4, mixtrl, Gemini etc) and Agents to do the jobs using Custom Tools(like Search Engine - Serper or DuckDuckGO) and Prompt Engineering",
         techStack: 'Tech Stack: LLMs, Agents, Flask, Prompt Engineering, React NextJS, APIS, Hooks, CrewAI',
         link: '',
-        video: 'https://firebasestorage.googleapis.com/v0/b/newtry-d602d.appspot.com/o/Job%20Searching%20Agent%20-%20Made%20with%20Clipchamp.mp4?alt=media&token=4e862d09-47d1-4604-b942-66403e7c8f52'
+        video: 'https://firebasestorage.googleapis.com/v0/b/newtry-d602d.appspot.com/o/Job%20Searching%20Agent%20-%20Made%20with%20Clipchamp.mp4?alt=media&token=4e862d09-47d1-4604-b942-66403e7c8f52',
+        code: 'https://github.com/Saurabh7Goku/Job-Posting-Search-Agent'
     },
     {
         id: 6,
@@ -74,7 +79,8 @@ const projectsData = [
         description: "A Violence Detection Project which detects certain kinds of activity (like Fighting, Abuse, Arson etc) as Violence. This project is build using Deep Learning algorithms like LSTM(Long Sort-Term Memory) for memory, CNNs(Convolutional Neural Nets) and InceptionNet as Transfer Learning. This project uses Flask and Html as Frontend and Backend Server for the project and shows violence in real time with frame target counter",
         techStack: 'Tech Stack: Deep Learning, Transfer Learning, CNNs, LSTM, Python, Flask, SocketIO, Inception V-NET',
         link: '',
-        video: 'https://firebasestorage.googleapis.com/v0/b/newtry-d602d.appspot.com/o/violence_detection_video.mp4?alt=media&token=40857c30-3972-47dd-8ffd-e05c214e44dc'
+        video: 'https://firebasestorage.googleapis.com/v0/b/newtry-d602d.appspot.com/o/violence_detection_video.mp4?alt=media&token=40857c30-3972-47dd-8ffd-e05c214e44dc',
+        code: 'https://github.com/Saurabh7Goku/realtime_violencedetection'
     },
 
     {
@@ -86,9 +92,9 @@ const projectsData = [
         description: "This is an Android Application build using flutter SDK in dart named SavantGen which is a personal AI Assistant and also contains feature of ATS Resume Scan. It can Detect Missing Keywords, Improvise the Content writing on the resume, Guide how to improve for targeted JOB's Positions. Contains an Admin Dashboard where Admin can control the User's trials or increases their attempts",
         techStack: 'Tech Stack: Python, LLMs, Agents, CrewAI, API, Gradio',
         link: 'https://huggingface.co/spaces/Saurabhgk18/Nutritionist_AI',
-        video: 'https://firebasestorage.googleapis.com/v0/b/newtry-d602d.appspot.com/o/Nutrition-AI.mp4?alt=media&token=75229000-c38d-454a-807c-9b82df174bc5'
+        video: 'https://firebasestorage.googleapis.com/v0/b/newtry-d602d.appspot.com/o/Nutrition-AI.mp4?alt=media&token=75229000-c38d-454a-807c-9b82df174bc5',
+        code: 'https://github.com/Saurabh7Goku/Nutritionist_AI'
     },
-
     {
         id: 8,
         title: 'ATS Resume Checker - AI',
@@ -98,9 +104,9 @@ const projectsData = [
         description: "The ATS Resume Checker is a tool designed to simplify the job application process by providing a comprehensive analysis of your resume against a provided job description. The primary goal is to enhance your chances of success in the applicant tracking system (ATS) by ensuring your resume aligns with the requirements of the targeted job",
         techStack: 'Tech Stack: Python, LLMs, Streamlit, Prompt Engineering',
         link: 'https://huggingface.co/spaces/Saurabhgk18/Resume-Checker-ATS',
-        video: ''
+        video: '',
+        code: 'https://github.com/Saurabh7Goku/ATS_Resume_Checker'
     },
-
     {
         id: 9,
         title: 'ATS-Resume Scanner App',
@@ -110,8 +116,36 @@ const projectsData = [
         description: "ATS Resume Scan: SavantGen's flagship feature revolutionizes job applications by detecting missing keywords and refining resume content and improvise the content of the resume. Personalized Guidance: Users receive tailored suggestions and actionable insights to optimize their resumes for specific job positions. Career Development: SavantGen fosters a collaborative environment, offering invaluable support on the journey to professional success",
         techStack: 'Tech Stack: Flutter, Dart, Firebase, Firebase-Cloud, Rest-API, LLMs',
         link: '',
-        video: 'https://firebasestorage.googleapis.com/v0/b/newtry-d602d.appspot.com/o/savantGEN.mp4?alt=media&token=e0bae2d9-ec42-4ff7-ba98-e4e420bfd5eb'
+        video: 'https://firebasestorage.googleapis.com/v0/b/newtry-d602d.appspot.com/o/savantGEN.mp4?alt=media&token=e0bae2d9-ec42-4ff7-ba98-e4e420bfd5eb',
+        code: 'https://github.com/Saurabh7Goku/SavantGen-AI'
     },
+    {
+        id: 10,
+        title: 'Chat Application AI',
+        category: 'Artificial Intelligence',
+        tag: 'ai',
+        image: '/images/projects/chatbot.jpg',
+        description: "This is a Artificial Intelligence Application which will answer to your queries real quick and effortlessly using Large Language Models. We leverage state-of-the-art language models hosted on the Hugging Face Model Hub to power our chat bot. The backend of our Chat Bot is built using Python, a versatile and powerful programming language The user interface of our application is developed using Streamlit",
+        techStack: 'Tech Stack: Python, Streamlit, LLM, API, HuggingFace and Huggingface Spaces',
+        link: 'https://huggingface.co/spaces/Saurabhgk18/custome_chatbot',
+        video: '',
+        code: 'https://github.com/Saurabh7Goku/Multi_Model-Chat-App',
+
+    },
+    {
+        id: 11,
+        title: 'Billboards Data Analysis',
+        category: 'Data Analysis',
+        tag: 'data_analyst',
+        image: '/images/projects/billboards.png',
+        description: "This is a Artificial Intelligence Application which will answer to your queries real quick and effortlessly using Large Language Models. We leverage state-of-the-art language models hosted on the Hugging Face Model Hub to power our chat bot. The backend of our Chat Bot is built using Python, a versatile and powerful programming language The user interface of our application is developed using Streamlit",
+        techStack: 'Tech Stack: Python, Streamlit, LLM, API, HuggingFace and Huggingface Spaces',
+        link: 'https://huggingface.co/spaces/Saurabhgk18/custome_chatbot',
+        video: '',
+        code: 'https://saurabh7goku.github.io/Billboard-Analysis/',
+    },
+
+
 
 ];
 
@@ -172,9 +206,6 @@ const Projects = () => {
                                     </div>
                                 </div>
                             ))}
-                            {/* Empty grid items to center the remaining two */}
-                            <div className="invisible"></div>
-                            <div className="invisible"></div>
                         </motion.div>
                     </div>
                 </Layout>
@@ -205,9 +236,12 @@ const Projects = () => {
                             </ul>
 
                             <p className="text-xs text-blue-700 flex flex-col items-center justify-center font-bold py-2">{selectedProject.techStack}</p>
-                            {selectedProject.link && (
-                                <a href={selectedProject.link} className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Go Live</a>
-                            )}
+                            <div className='flex flex-row justify-between'>
+                                {selectedProject.link && (
+                                    <a href={selectedProject.link} className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Go Live</a>
+                                )}
+                                <a href={selectedProject.link} className="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Code Base</a>
+                            </div>
                         </div>
                     </div >
                 )

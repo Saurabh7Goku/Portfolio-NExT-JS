@@ -82,9 +82,9 @@ function about() {
                         <div className='col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3'>
                             <div className='flex flex-col items-end justify-center xl:items-center'>
                                 <span className='inline-block text-7xl font-bold md:text-5xl sm:text-3xl xs:text-3xl'>
-                                    <AnimatedNumber value={50} />+
+                                    <AnimatedNumber value={2} />
                                 </span>
-                                <h2 className='text-xl font-medium capitalize text-dark/65 xl:text-center md:text-lg sm:text-base xs:text-sm'>satisfied Clients</h2>
+                                <h2 className='text-xl font-medium capitalize text-dark/65 xl:text-center md:text-lg sm:text-base xs:text-sm'>Freelanced Clients</h2>
                             </div>
                             <div className='flex flex-col items-end justify-center xl:items-center'>
                                 <span className='inline-block text-7xl font-bold md:text-5xl sm:text-3xl xs:text-3xl'>
@@ -94,9 +94,9 @@ function about() {
                             </div>
                             <div className='flex flex-col items-end justify-center xl:items-center'>
                                 <span className='inline-block text-7xl font-bold md:text-5xl sm:text-3xl xs:text-3xl'>
-                                    1+
+                                    8+
                                 </span>
-                                <h2 className='text-xl font-medium capitalize text-dark/65 xl:text-center md:text-lg sm:text-base xs:text-sm'>Years Of Experience </h2>
+                                <h2 className='text-xl font-medium capitalize text-dark/65 xl:text-center md:text-lg sm:text-base xs:text-sm'>Months Of Experience </h2>
                             </div>
                         </div>
                     </div>
