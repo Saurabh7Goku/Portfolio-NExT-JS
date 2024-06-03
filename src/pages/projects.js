@@ -27,7 +27,7 @@ const projectsData = [
         category: 'Machine Learning',
         tag: 'machine_learning',
         image: '/images/projects/obj.png',
-        description: "This is a machine learning project for object detections using transfer learning Using dataset Coco. This application takes an image and generate a prediction confidence for each category present inside the image and draw a rectangle around them. Using Tranfer learning the Application works 60% faster and 40% more efficient than the standard Approach.",
+        description: "This is a machine learning project for object detections using transfer learning Using CoCo Dataset for training. This application takes an image and generate a prediction confidence for each category present inside the image and draw a rectangle around them. Using Tranfer learning the Application works 60% faster and 40% more efficient than the standard Approach",
         techStack: 'Tech Stack: Deep Learning, Transfer Learning, NextJS, APIs',
         link: '/ObjectDetection',
         video: 'https://firebasestorage.googleapis.com/v0/b/newtry-d602d.appspot.com/o/objectDetection.mp4?alt=media&token=77e06830-85df-49b8-9a6b-b8183ac2f7e4',
