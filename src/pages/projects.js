@@ -23,6 +23,19 @@ const projectsData = [
 
     {
         id: 2,
+        title: 'Object Detection',
+        category: 'Machine Learning',
+        tag: 'machine_learning',
+        image: '/images/projects/obj.png',
+        description: "This is a machine learning project for object detections using transfer learning Using dataset Coco. This application takes an image and generate a prediction confidence for each category present inside the image and draw a rectangle around them. Using Tranfer learning the Application works 60% faster and 40% more efficient than the standard Approach.",
+        techStack: 'Tech Stack: Deep Learning, Transfer Learning, NextJS, APIs',
+        link: '/ObjectDetection',
+        video: '',
+        code: 'https://github.com/Saurabh7Goku'
+    },
+
+    {
+        id: 3,
         title: 'Pizza Sales Analysis - PowerBI',
         category: 'Data Analyst',
         tag: 'data_analyst',
@@ -34,7 +47,7 @@ const projectsData = [
         code: 'https://github.com/Saurabh7Goku/Sales_data_analysis'
     },
     {
-        id: 3,
+        id: 4,
         title: 'eCommerce Analysis - PowerBI',
         category: 'Data Analyst',
         tag: 'data_analyst',
@@ -47,7 +60,7 @@ const projectsData = [
     },
 
     {
-        id: 4,
+        id: 5,
         title: 'Cancer Classification ',
         category: 'Deep Learning',
         tag: 'machine_learning',
@@ -59,7 +72,7 @@ const projectsData = [
         code: 'https://github.com/Saurabh7Goku/END_TO_END-Chest-Cancer-Detection-using-MlFLow-DVC'
     },
     {
-        id: 5,
+        id: 6,
         title: 'Job Posting Search AGENTIC Model',
         category: 'SAAS-AI',
         tag: 'sda',
@@ -71,7 +84,7 @@ const projectsData = [
         code: 'https://github.com/Saurabh7Goku/Job-Posting-Search-Agent'
     },
     {
-        id: 6,
+        id: 7,
         title: 'Violence Detection',
         category: 'Machine Learning',
         tag: 'machine_learning',
@@ -84,7 +97,7 @@ const projectsData = [
     },
 
     {
-        id: 7,
+        id: 8,
         title: 'Get Nutrition-AI',
         category: 'Artificial Intelligence',
         tag: 'ai',
@@ -96,7 +109,7 @@ const projectsData = [
         code: 'https://github.com/Saurabh7Goku/Nutritionist_AI'
     },
     {
-        id: 8,
+        id: 9,
         title: 'ATS Resume Checker - AI',
         category: 'Artificial Intelligence',
         tag: 'ai',
@@ -108,7 +121,7 @@ const projectsData = [
         code: 'https://github.com/Saurabh7Goku/ATS_Resume_Checker'
     },
     {
-        id: 9,
+        id: 10,
         title: 'ATS-Resume Scanner App',
         category: 'AI-Software',
         tag: 'sda',
@@ -120,7 +133,7 @@ const projectsData = [
         code: 'https://github.com/Saurabh7Goku/SavantGen-AI'
     },
     {
-        id: 10,
+        id: 11,
         title: 'Chat Application AI',
         category: 'Artificial Intelligence',
         tag: 'ai',
@@ -133,7 +146,7 @@ const projectsData = [
 
     },
     {
-        id: 11,
+        id: 12,
         title: 'Billboards Data Analysis',
         category: 'Data Analysis',
         tag: 'data_analyst',

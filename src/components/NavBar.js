@@ -65,6 +65,7 @@ function NavBar() {
                     <CustomLink href="/about" title={"About"} className='mx-4' />
                     <CustomLink href="/projects" title={"Projects"} className='mx-4' />
                     <CustomLink href="/achievements" title={"Achievements"} className='mx-4' />
+                    <CustomLink href="/ObjectDetection" title={"ObjectDetection"} className='mx-4' />
                     <CustomLink href="/contacts" title={"Contacts"} className='mx-4' />
                 </nav>
 
