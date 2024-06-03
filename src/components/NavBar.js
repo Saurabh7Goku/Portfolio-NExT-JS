@@ -66,7 +66,7 @@ function NavBar() {
                     <CustomLink href="/projects" title={"Projects"} className='mx-4' />
                     <CustomLink href="/achievements" title={"Achievements"} className='mx-4' />
                     <CustomLink href="/ObjectDetection" title={"ObjectDetection"} className='mx-4' />
-                    <CustomLink href="/contacts" title={"Contacts"} className='mx-4' />
+                    <CustomLink href="/contacts" title={"Contact Me"} className='mx-4' />
                 </nav>
 
                 <nav className='flex items-center justify-center flex-wrap'>
@@ -102,6 +102,8 @@ function NavBar() {
                             <CustomMobileLink href="/about" title={"About"} className='' toggle={handleClick} />
                             <CustomMobileLink href="/projects" title={"Projects"} className='' toggle={handleClick} />
                             <CustomMobileLink href="/achievements" title={"Achievements"} className='' toggle={handleClick} />
+                            <CustomMobileLink href="/ObjectDetection" title={"ObjectDetection"} className='' toggle={handleClick} />
+                            <CustomMobileLink href="/contacts" title={"Contact Me"} className='' toggle={handleClick} />
                         </nav>
 
                         <nav className='flex items-center justify-center flex-wrap mt-2'>
