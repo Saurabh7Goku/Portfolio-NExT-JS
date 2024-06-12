@@ -31,7 +31,7 @@ const projectsData = [
         techStack: 'Tech Stack: Deep Learning, Transfer Learning, NextJS, APIs',
         link: '/ObjectDetection',
         video: 'https://firebasestorage.googleapis.com/v0/b/newtry-d602d.appspot.com/o/objectDetection.mp4?alt=media&token=77e06830-85df-49b8-9a6b-b8183ac2f7e4',
-        code: 'https://github.com/Saurabh7Goku'
+        code: 'https://github.com/Saurabh7Goku/Portfolio-NExT-JS/blob/main/src/pages/ObjectDetection.js'
     },
 
     {
