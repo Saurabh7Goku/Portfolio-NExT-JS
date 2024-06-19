@@ -15,9 +15,10 @@ export default function App({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <meta name="viewpoint" content="widht=device-width, initial-scale=1" />
+        <meta name="viewport" content="widht=device-width, initial-scale=1" />
         <link rel="shortcut icon" href='../fav/favicon.ico' />
-      </Head><main className={`${montserrat.variable} font-mont`}>
+      </Head>
+      <main className={`${montserrat.variable} font-mont`}>
         <NavBar />
         <Component {...pageProps} />
         <Footer />

@@ -3,10 +3,12 @@ import Image from 'next/image';
 import * as tf from '@tensorflow/tfjs';
 import { load as cocoModalLoad } from '@tensorflow-models/coco-ssd';
 import Loader from '@/components/Loader';
-import Layout from '@/components/Layout';
 import AnimatedText from '@/components/AnimatedText';
 import TransitionEffect from '@/components/TransitionEffect';
 import Head from 'next/head';
+import { useRouter } from 'next/router'
+import Obj from './Obj';
+
 
 function ObjectDetection() {
     const canvasEle = useRef(null);
@@ -15,6 +17,12 @@ function ObjectDetection() {
     const [detectedObjects, setDetectedObjects] = useState([]);
     const [uploadedImage, setUploadedImage] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
+
+    const router = useRouter();
+    const switchToVideoDetection = () => {
+
+        router.push('/Obj');
+    };
 
     const draw = (ctx, objects) => {
         canvasEle.current.width = imageEle.current.width;
@@ -99,7 +107,15 @@ function ObjectDetection() {
             </Head>
             <TransitionEffect />
             <main className='w-full mb-16 flex flex-col items-center justify-center px-3'>
-                <AnimatedText text={'Object Detection'} className='text-3xl font-bold xs:text-2xl sm:text-2xl md:text-4xl lg:text-5xl' />
+                <div className='w-full flex items-center justify-between'>
+                    <AnimatedText text={'Object Detection'} className='!text-5xl font-bold xs:text-2xl sm:text-2xl md:text-4xl lg:text-5xl' />
+                    <button
+                        onClick={switchToVideoDetection}
+                        className='ml-4 py-1 px-4 bg-red-500 text-white font-bold text-sm rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out'
+                    >
+                        Switch to Video Detection
+                    </button>
+                </div>
                 <div className="grid grid-cols-2 gap-8 pt-10 w-full xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
                     <div className="flex flex-col justify-center items-center p-5 shadow-lg rounded-lg bg-gradient-to-r from-blue-300 to-blue-200">
                         <div className="w-full min-h-[500px] h-full rounded-lg shadow-inner mb-8 relative">
