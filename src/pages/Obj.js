@@ -122,8 +122,8 @@ const Obj = () => {
                                         </button>
                                     </form>
                                 </div>
-                                <div className="grid grid-cols-2 gap-8 sm:gap-48 xs:gap-48 pt-10 w-full xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
-                                    <div>
+                                <div className="grid grid-cols-2 gap-8 pt-10 w-full xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
+                                    <div className='flex flex-col relative'>
                                         <h4 className='text-xl font-bold flex flex-col items-center pb-2' >Object Video</h4>
                                         <div className="flex flex-col relative w-full h-full">
                                             {video ? (
@@ -138,7 +138,7 @@ const Obj = () => {
                                                     <canvas
                                                         ref={canvasRef}
                                                         width={500}
-                                                        className="absolute top-0 left-0 border-2 border-gray-400 w-full rounded-xl"
+                                                        className="relative top-0 left-0 border-2 border-gray-400 w-full rounded-xl"
                                                     />
                                                 </>
                                             ) : (
@@ -148,10 +148,10 @@ const Obj = () => {
                                             )}
                                         </div>
                                     </div>
-                                    <div>
+                                    <div className=''>
                                         <h4 className='text-xl font-bold flex flex-col items-center pb-2' >Object Detected</h4>
                                         <div className="relative overflow-y-auto border-2 border-gray-400 rounded-xl">
-                                            <div className="sm:p-1 sm:m-1 xs:p-1 xs:m-1 p-2 m-2">
+                                            <div className="sm:p-1 sm:m-1 xs:p-1 xs:m-1 p-2 m-2 max-h-[500px]">
                                                 <ul className="w-full h-full">
                                                     {detections.length > 0 ? (
                                                         detections.map((data, index) => (
