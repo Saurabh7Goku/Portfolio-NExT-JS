@@ -41,7 +41,7 @@ export default function Home() {
                 I am always eager to learn new skills and technologies, and to contribute my expertise to
                 exciting and impactful projects. </p>
               <div className='flex items-center self-start mt-2 lg:self-center'>
-                <Link href="/Resume.pdf" target='_blank'
+                <Link href="/ResumeML.pdf" target='_blank'
                   className='flex items-center bg-dark text-light p-2.5 px-6 rounded-lg 
                   text-lg font-semibold hover:bg-light hover:text-dark border-2 border-soild 
                   border-transparent hover:border-dark lg:items md:p-2 md:px-4 md:text-base'
