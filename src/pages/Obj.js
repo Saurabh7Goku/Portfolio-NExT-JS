@@ -124,7 +124,7 @@ const Obj = () => {
                                 </div>
                                 <div className="grid grid-cols-2 gap-8 sm:gap-48 xs:gap-48 pt-10 w-full xs:grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2">
                                     <div>
-                                        <h4 className='text-xl font-bold flex flex-col items-center pb-2' >Object Detected</h4>
+                                        <h4 className='text-xl font-bold flex flex-col items-center pb-2' >Object Video</h4>
                                         <div className="flex flex-col relative w-full h-full">
                                             {video ? (
                                                 <>
