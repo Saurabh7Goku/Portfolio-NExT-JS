@@ -108,10 +108,10 @@ function ObjectDetection() {
             <TransitionEffect />
             <main className='w-full mb-16 flex flex-col items-center justify-center px-3'>
                 <div className='w-full flex items-center justify-between'>
-                    <AnimatedText text={'Object Detection'} className='!text-5xl font-bold xs:text-2xl sm:text-2xl md:text-4xl lg:text-5xl' />
+                    <AnimatedText text={'Object Detection'} className='!text-5xl font-bold xs:!text-2xl sm:!text-2xl md:text-4xl lg:text-5xl' />
                     <button
                         onClick={switchToVideoDetection}
-                        className='ml-4 py-1 px-4 bg-red-500 text-white font-bold text-sm rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out'
+                        className='xs:!text-sm sm:!text-sm ml-4 py-1 px-4 bg-red-500 text-white font-bold text-sm rounded-lg hover:bg-blue-700 transition duration-300 ease-in-out'
                     >
                         Switch to Video Detection
                     </button>
