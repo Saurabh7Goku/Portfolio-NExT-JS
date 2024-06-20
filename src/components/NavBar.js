@@ -96,7 +96,7 @@ function NavBar() {
             {
                 isOpen ?
                     <div className='min-w-[70vw] flex flex-col z-30 justify-between items-center fixed top-1/2 left-1/2 
-                        -translate-x-1/2 -translate-y-1/2 bg-dark/70 rounded-lg backdrop-blur-md py-32'>
+                        -translate-x-1/2 -translate-y-1/2 bg-dark/60 rounded-lg backdrop-blur-md py-32'>
                         <nav className='flex items-center flex-col justify-center'>
                             <CustomMobileLink href="/" title={"Home"} className='' toggle={handleClick} />
                             <CustomMobileLink href="/about" title={"About"} className='' toggle={handleClick} />
@@ -106,25 +106,25 @@ function NavBar() {
                             <CustomMobileLink href="/contacts" title={"Contact Me"} className='' toggle={handleClick} />
                         </nav>
 
-                        <nav className='flex items-center justify-center flex-wrap mt-2'>
+                        <nav className='flex items-center justify-center flex-wrap mt-5 '>
                             <motion.a href="https://twitter.com/saurabhgk7" target={"_blank"}
                                 whileHover={{ y: -8 }}
                                 whileTap={{ scale: 0.6 }}
-                                className='w-6 mr-3 sm:mx-1'>
+                                className='w-8 mr-3 sm:mx-1'>
                                 <TwitterIcon />
                             </motion.a>
 
                             <motion.a href="https://github.com/Saurabh7Goku" target={"_blank"}
                                 whileHover={{ y: -8 }}
                                 whileTap={{ scale: 0.6 }}
-                                className='w-6 mx-3 sm:mx-1'>
+                                className='w-8 mx-3 sm:mx-1'>
                                 <GithubIcon />
                             </motion.a>
 
                             <motion.a href="https://www.linkedin.com/in/saurabh-singh-682a811b0/" target={"_blank"}
                                 whileHover={{ y: -8 }}
                                 whileTap={{ scale: 0.6 }}
-                                className='w-6 mx-3 sm:mx-1'>
+                                className='w-8 mx-3 sm:mx-1'>
                                 <LinkedInIcon />
                             </motion.a>
                         </nav>
