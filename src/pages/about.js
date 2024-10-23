@@ -53,22 +53,19 @@ function about() {
                                 Introductions
                             </h2>
                             <p className='font-medium sm:text-sm md:text-lg xl:text-lg'>
-                                Hi, I am an Analyst/ML Engineer with a BTech in Computer Science from SISTec-R,
-                                where I learned how to apply Machine Learning algorithms, statistical
-                                analysis, and data visualization techniques to solve real-world problems.
+                                Hi There, I'm a Jr. Data Scientist at KPMG Bangalore. Leveraging data analytics and machine learning to drive impactful business solutions.
+                                Passionate about transforming complex datasets into actionable insights.
                             </p>
 
-                            <p className='my-4 font-medium sm:text-sm md:text-lg xl:text-lg'>Recently, I led the design and development of multiple enterprise-level
-                                microservice applications for Commerce Experience Group, driving ₹150
-                                Thousands of revenue every quarter using Flutter, dart, TensorFlow Lite,
-                                and WhatsApp APIs.
-                            </p>
-
-                            <p className='font-medium sm:text-sm md:text-lg xl:text-lg'>I also designed and implemented scalable APIs and
-                                background workers for managing analysis and reports for the Sales,
-                                Purchase, and Expenses teams, incresing report efficiency by 60%.
+                            <p className='my-4 font-medium sm:text-sm md:text-lg xl:text-lg'>I also designed and implemented scalable APIs and
+                                background workers for managing SAAS Applications,
                                 I enhanced software speed, surpassing existing solutions, and expanded
                                 functionality for improved user experience.
+                            </p>
+
+                            <p className='font-medium sm:text-sm md:text-lg xl:text-lg'>Recently, I've been on the project which automate code, edit and re-write the code for the given
+                                prompt query, the AI asked several queries also regarding the pathway of the client and what output is expected the AI utilizes the custome build editor to run code in docker env.
+                                The AI is capable of solving problems, Maths, Coding, General Apptitude and trivial Queries.
                             </p>
                         </div>
                         <div className='col-span-3 relative h-max rounded-2xl border-2 border-soild border-dark bg-light p-8 xl:col-span-4 md:order-1 md:col-span-8 '>
@@ -82,19 +79,19 @@ function about() {
                         <div className='col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3'>
                             <div className='flex flex-col items-end justify-center xl:items-center'>
                                 <span className='inline-block text-7xl font-bold md:text-5xl sm:text-3xl xs:text-3xl'>
-                                    <AnimatedNumber value={2} />
+                                    <AnimatedNumber value={7} />
                                 </span>
                                 <h2 className='text-xl font-medium capitalize text-dark/65 xl:text-center md:text-lg sm:text-base xs:text-sm'>Freelanced Clients</h2>
                             </div>
                             <div className='flex flex-col items-end justify-center xl:items-center'>
                                 <span className='inline-block text-7xl font-bold md:text-5xl sm:text-3xl xs:text-3xl'>
-                                    <AnimatedNumber value={40} />+
+                                    <AnimatedNumber value={49} />+
                                 </span>
                                 <h2 className='text-xl font-medium capitalize text-dark/65 xl:text-center md:text-lg sm:text-base xs:text-sm'>projects Completed</h2>
                             </div>
                             <div className='flex flex-col items-end justify-center xl:items-center'>
                                 <span className='inline-block text-7xl font-bold md:text-5xl sm:text-3xl xs:text-3xl'>
-                                    8+
+                                    18+
                                 </span>
                                 <h2 className='text-xl font-medium capitalize text-dark/65 xl:text-center md:text-lg sm:text-base xs:text-sm'>Months Of Experience </h2>
                             </div>
