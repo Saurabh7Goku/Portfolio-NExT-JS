@@ -63,7 +63,7 @@ function about() {
                                 functionality for improved user experience.
                             </p>
 
-                            <p className='font-medium sm:text-sm md:text-lg xl:text-lg'>Recently, I've been on the project which automate code, edit and re-write the code for the given
+                            <p className='font-medium sm:text-sm md:text-lg xl:text-lg'>Recently, I&apos;ve been on the project which automate code, edit and re-write the code for the given
                                 prompt query, the AI asked several queries also regarding the pathway of the client and what output is expected the AI utilizes the custome build editor to run code in docker env.
                                 The AI is capable of solving problems, Maths, Coding, General Apptitude and trivial Queries.
                             </p>
