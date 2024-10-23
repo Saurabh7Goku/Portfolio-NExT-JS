@@ -53,7 +53,7 @@ function about() {
                                 Introductions
                             </h2>
                             <p className='font-medium sm:text-sm md:text-lg xl:text-lg'>
-                                Hi There, I'm a Jr. Data Scientist at KPMG Bangalore. Leveraging data analytics and machine learning to drive impactful business solutions.
+                                Hi There, I&apos;m a Jr. Data Scientist at KPMG Bangalore. Leveraging data analytics and machine learning to drive impactful business solutions.
                                 Passionate about transforming complex datasets into actionable insights.
                             </p>
 
