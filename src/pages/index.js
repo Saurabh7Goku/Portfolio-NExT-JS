@@ -9,7 +9,6 @@ import { LinkArrow } from '@/components/Icons'
 import HireMe from '@/components/HireMe'
 import lightbulb from "../../public/images/svgs/miscellaneous_icons_1.svg";
 import TransitionEffect from '@/components/TransitionEffect'
-import ContactForm from '@/components/ContactUs'
 
 const inter = Inter({ subsets: ['latin'] })
 
