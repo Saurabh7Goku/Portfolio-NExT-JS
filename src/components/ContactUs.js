@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import AnimatedText from './AnimatedText';
+import { motion } from "framer-motion";
 
 const ContactForm = () => {
     const [name, setName] = useState('');
@@ -129,9 +130,8 @@ const ContactForm = () => {
                             </div>
                         </div>
                     </div>
-
-
                 </div>
+
                 <div className="w-1/2 md:w-full md:pt-0 sm:pt-0 sm:w-full xs:w-full lg:w-full">
                     <form onSubmit={handleSubmit} className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                         <div className="mb-4">
