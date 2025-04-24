@@ -45,6 +45,10 @@ function Experience() {
             <div ref={ref} className='w-[75%] mx-auto relative lg:w-[90%] sm:w-full xs:w-full md:w-full'>
                 <motion.div style={{ scaleY: scrollYProgress }} className='absolute left-9 top-1 w-[6px] h-full bg-green-500 origin-top md:w-[2px] md:left-[30px] xs:left-[20px]' />
                 <ul className='w-full flex flex-col items-start justify-between ml-4 xs:ml-2'>
+                    <Details position={'Data Scientist'} company={'KPMG Bangalore'} time={'JULY 2023 - Current'} address={'Bangalore'}
+                        work1='Develops predictive models using machine learning and statistical techniques, builds automated data pipelines for efficient processing, and collaborates with business teams to translate real-world problems into impactful data-driven solutions.'
+                        work2='Drives innovation and competitive edge by analyzing user feedback and proprietary data for product development, while fostering a data-driven culture across teams.'
+                        work3='Maintains high model accuracy and reliability by continuously monitoring performance and retraining as needed, while ensuring data governance, privacy, and compliance—leading to trustworthy, scalable, and regulation-compliant AI solutions.' />
                     <Details position={'Data Analyst/Developer'} company={'Dectwin Enterprise Ltd;'} time={'APR 2023 - SEPT 2023'} address={'Remote'}
                         work1='Led the design and development of multiple enterprise-level microservice applications of Commerce Experience Group, driving ₹150 Thousands of revenue every quarter of year using the latest technologies of Flutter, dart, TensorFlow Lite, whatsapp APIs.'
                         work2='Designed and implemented scalable APIs and background workers for managing analysis and reports forming for the Sales, Purchase,Expenses while increasing report efficiency by 60%.'
