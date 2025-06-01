@@ -14,6 +14,8 @@ import numpy as np
 from werkzeug.utils import secure_filename
 import threading
 import time
+from PyPDF2 import PdfReader
+
 
 load_dotenv()
 
@@ -44,55 +46,125 @@ processing_results = {}
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-def extract_text_ocr(file_path, task_id=None):
+# def extract_text_ocr(file_path, task_id=None):
+#     """Extract text using OCR for image-based PDFs or scanned documents"""
+#     try:
+#         if task_id:
+#             processing_status[task_id] = {"status": "processing", "progress": "Starting OCR..."}
+        
+#         logger.info("Starting OCR text extraction...")
+        
+#         # Convert PDF to images with optimized settings
+#         images = convert_from_path(
+#             file_path, 
+#             # dpi=200,  # Reduced from 300 for faster processing
+#             # fmt='jpeg',
+#             # thread_count=2  # Limit thread count to prevent resource issues
+#         )
+#         logger.info(f"Converted PDF to {len(images)} images")
+        
+#         if task_id:
+#             processing_status[task_id]["progress"] = f"Processing {len(images)} pages..."
+        
+#         extracted_text = ''
+#         for i, image in enumerate(images):
+#             try:
+#                 if task_id:
+#                     processing_status[task_id]["progress"] = f"Processing page {i+1}/{len(images)}"
+                
+#                     # image = cv2.imread('input_image.png')
+#                     # image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+#                     # image = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
+#                     # image = cv2.GaussianBlur(image, (3, 3), 0)
+
+#                 # Optimized OCR configuration
+#                 page_text = pytesseract.image_to_string(
+#                     image,
+#                     lang='hin+eng',  # Hindi
+#                     config='--oem 3 --psm 3'
+#                 )
+                
+#                 extracted_text += page_text
+                
+#                 logger.info(f"Page {i+1} OCR complete - extracted {len(page_text)} characters")
+                
+#                 # Add small delay to prevent overwhelming the system
+#                 time.sleep(0.1)
+                
+#             except Exception as page_error:
+#                 logger.error(f"OCR failed for page {i+1}: {str(page_error)}")
+#                 continue
+        
+#         if extracted_text.strip():
+#             logger.info(f"OCR extraction successful - total {len(extracted_text)} characters")
+#             if task_id:
+#                 processing_status[task_id] = {"status": "completed", "progress": "OCR completed successfully"}
+#                 processing_results[task_id] = extracted_text
+#             return extracted_text
+#         else:
+#             logger.warning("OCR extraction completed but no text found")
+#             if task_id:
+#                 processing_status[task_id] = {"status": "failed", "progress": "No text found in PDF"}
+#             return None
+            
+#     except Exception as e:
+#         logger.error(f"OCR extraction failed: {str(e)}")
+#         if task_id:
+#             processing_status[task_id] = {"status": "failed", "progress": f"Error: {str(e)}"}
+#         return None
+
+
+
+
+
+def extract_text_ocr(file_path, task_id=None): #lightweighted
     """Extract text using OCR for image-based PDFs or scanned documents"""
     try:
         if task_id:
             processing_status[task_id] = {"status": "processing", "progress": "Starting OCR..."}
         
         logger.info("Starting OCR text extraction...")
-        
-        # Convert PDF to images with optimized settings
-        images = convert_from_path(
-            file_path, 
-            # dpi=200,  # Reduced from 300 for faster processing
-            # fmt='jpeg',
-            # thread_count=2  # Limit thread count to prevent resource issues
-        )
-        logger.info(f"Converted PDF to {len(images)} images")
-        
+
+        # Get number of pages to avoid preloading all images
+        page_count = len(PdfReader(file_path).pages)
+        logger.info(f"PDF has {page_count} pages")
+
         if task_id:
-            processing_status[task_id]["progress"] = f"Processing {len(images)} pages..."
-        
+            processing_status[task_id]["progress"] = f"Processing {page_count} pages..."
+
         extracted_text = ''
-        for i, image in enumerate(images):
+        for i in range(1, page_count + 1):
             try:
                 if task_id:
-                    processing_status[task_id]["progress"] = f"Processing page {i+1}/{len(images)}"
-                
-                    # image = cv2.imread('input_image.png')
-                    # image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-                    # image = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
-                    # image = cv2.GaussianBlur(image, (3, 3), 0)
+                    processing_status[task_id]["progress"] = f"Processing page {i}/{page_count}"
 
-                # Optimized OCR configuration
+                # Load only one page at a time to reduce memory usage
+                images = convert_from_path(
+                    file_path,
+                    first_page=i,
+                    last_page=i,
+                    dpi=200  # Optional: reduce from 300 for performance
+                )
+                image = images[0]
+
+                # Downscale image to reduce RAM usage
+                image = image.resize((image.width // 2, image.height // 2))
+
+                # OCR
                 page_text = pytesseract.image_to_string(
                     image,
-                    lang='hin+eng',  # Hindi
+                    lang='hin+eng',
                     config='--oem 3 --psm 3'
                 )
-                
+
                 extracted_text += page_text
-                
-                logger.info(f"Page {i+1} OCR complete - extracted {len(page_text)} characters")
-                
-                # Add small delay to prevent overwhelming the system
+                logger.info(f"Page {i} OCR complete - extracted {len(page_text)} characters")
                 time.sleep(0.1)
-                
+
             except Exception as page_error:
-                logger.error(f"OCR failed for page {i+1}: {str(page_error)}")
+                logger.error(f"OCR failed for page {i}: {str(page_error)}")
                 continue
-        
+
         if extracted_text.strip():
             logger.info(f"OCR extraction successful - total {len(extracted_text)} characters")
             if task_id:
@@ -104,12 +176,13 @@ def extract_text_ocr(file_path, task_id=None):
             if task_id:
                 processing_status[task_id] = {"status": "failed", "progress": "No text found in PDF"}
             return None
-            
+
     except Exception as e:
         logger.error(f"OCR extraction failed: {str(e)}")
         if task_id:
             processing_status[task_id] = {"status": "failed", "progress": f"Error: {str(e)}"}
         return None
+
 
 def process_pdf_async(file_path, task_id):
     """Process PDF asynchronously to avoid timeout issues"""
