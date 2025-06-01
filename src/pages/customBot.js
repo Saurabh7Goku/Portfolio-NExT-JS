@@ -1,4 +1,7 @@
 import { useState, useRef, useEffect, createContext } from 'react';
+import Head from 'next/head';
+import TransitionEffect from '@/components/TransitionEffect';
+
 
 // Create context for PDF text
 const PdfContext = createContext({ pdfText: '', setPdfText: () => { } });
@@ -339,225 +342,224 @@ export const Chatbot = () => {
     };
 
     return (
-        <PdfContext.Provider value={{ pdfText, setPdfText }}>
-            <div className="max-h-screen bg-gradient-to-br from-gray-900 to-indigo-900 flex items-center justify-center w-full pt-0">
-                {/* Main content area with instructions */}
-                <div className="min-h-screen text-center p-10 w-full pt-20">
-                    <div className="inline-flex items-center px-3 py-2 sm:px-4 sm:py-2 bg-white/80 backdrop-blur-sm rounded-full border border-gray-200/50 shadow-lg mb-4 sm:mb-6">
-                        <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 sm:mr-3 animate-pulse"></div>
-                        <span className="text-xs sm:text-sm font-medium text-gray-600">AI-Powered Document Assistant</span>
-                    </div>
-                    <h1 className="text-5xl sm:text-xl md:text-4xl font-extrabold text-white mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent animate-pulse">
-                        Hindi PDF Chat Assistant
-                    </h1>
-                    <p className="text-xl text-gray-300 mb-10 font-medium ">
-                        Upload a PDF document (including Hindi text) and chat with it using AI
-                    </p>
+        <><Head>
+            <title>Saurabh | Custom AI-Chat</title>
+            <meta name='description' content='any description' />
+        </Head>
+            <TransitionEffect />
+            <PdfContext.Provider value={{ pdfText, setPdfText }}>
+                <div className="max-h-screen bg-gradient-to-br from-gray-900 to-indigo-900 flex items-center justify-center w-full pt-0">
+                    {/* Main content area with instructions */}
+                    <div className="min-h-screen text-center p-10 w-full pt-20">
+                        <div className="inline-flex items-center px-3 py-2 sm:px-4 sm:py-2 bg-white/80 backdrop-blur-sm rounded-full border border-gray-200/50 shadow-lg mb-4 sm:mb-6">
+                            <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2 sm:mr-3 animate-pulse"></div>
+                            <span className="text-xs sm:text-sm font-medium text-gray-600">AI-Powered Document Assistant</span>
+                        </div>
+                        <h1 className="text-5xl sm:text-xl md:text-4xl font-extrabold text-white mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent animate-pulse">
+                            Hindi PDF Chat Assistant
+                        </h1>
+                        <p className="text-xl text-gray-300 mb-10 font-medium ">
+                            Upload a PDF document (including Hindi text) and chat with it using AI
+                        </p>
 
-                    <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-1 sm:gap-3 mb-10">
-                        {/* Status Card */}
-                        <div className="bg-gray-800 bg-opacity-80 backdrop-blur-md rounded-2xl shadow-2xl p-6 border border-gray-700">
-                            <h3 className="text-lg font-semibold text-white mb-4">System Status</h3>
-                            <div className="space-y-3 text-left text-gray-300">
-                                <div className="flex justify-between">
-                                    <span>Backend:</span>
-                                    <span className={getStatusColor()}>{getStatusText()}</span>
-                                </div>
-                                {pdfText && (
+                        <div className="mt-10 grid grid-cols-2 gap-4 sm:grid-cols-1 sm:gap-3 mb-10">
+                            {/* Status Card */}
+                            <div className="bg-gray-800 bg-opacity-80 backdrop-blur-md rounded-2xl shadow-2xl p-6 border border-gray-700">
+                                <h3 className="text-lg font-semibold text-white mb-4">System Status</h3>
+                                <div className="space-y-3 text-left text-gray-300">
                                     <div className="flex justify-between">
-                                        <span>PDF:</span>
-                                        <span className="text-green-400">Loaded ({pdfText.length} chars) ✅</span>
+                                        <span>Backend:</span>
+                                        <span className={getStatusColor()}>{getStatusText()}</span>
                                     </div>
-                                )}
+                                    {pdfText && (
+                                        <div className="flex justify-between">
+                                            <span>PDF:</span>
+                                            <span className="text-green-400">Loaded ({pdfText.length} chars) ✅</span>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+
+                            {/* Instructions Card */}
+                            <div className="bg-gray-800 bg-opacity-80 backdrop-blur-md rounded-2xl shadow-2xl p-6 border border-gray-700">
+                                <h3 className="text-lg font-semibold text-white mb-4">How to Use</h3>
+                                <ol className="text-left space-y-3 text-sm text-gray-300">
+                                    <li>1. Click the chat button below</li>
+                                    <li>2. Upload your PDF document</li>
+                                    <li>3. Ask questions about your document</li>
+                                    <li>4. Get AI-powered responses</li>
+                                </ol>
                             </div>
                         </div>
 
-                        {/* Instructions Card */}
-                        <div className="bg-gray-800 bg-opacity-80 backdrop-blur-md rounded-2xl shadow-2xl p-6 border border-gray-700">
-                            <h3 className="text-lg font-semibold text-white mb-4">How to Use</h3>
-                            <ol className="text-left space-y-3 text-sm text-gray-300">
-                                <li>1. Click the chat button below</li>
-                                <li>2. Upload your PDF document</li>
-                                <li>3. Ask questions about your document</li>
-                                <li>4. Get AI-powered responses</li>
-                            </ol>
-                        </div>
+                        {pdfText && (
+                            <div className="bg-green-900 bg-opacity-70 backdrop-blur-md border border-green-500 text-green-100 px-6 py-4 rounded-2xl mb-10 max-w-2xl mx-auto">
+                                <strong>PDF Loaded Successfully!</strong><br />
+                                <span className="text-sm">
+                                    {pdfText.length} characters extracted • Ready for questions
+                                </span>
+                            </div>
+                        )}
                     </div>
 
-                    {pdfText && (
-                        <div className="bg-green-900 bg-opacity-70 backdrop-blur-md border border-green-500 text-green-100 px-6 py-4 rounded-2xl mb-10 max-w-2xl mx-auto">
-                            <strong>PDF Loaded Successfully!</strong><br />
-                            <span className="text-sm">
-                                {pdfText.length} characters extracted • Ready for questions
-                            </span>
-                        </div>
-                    )}
-                </div>
-
-                {/* Chat Toggle Button */}
-                <button
-                    onClick={toggleChat}
-                    className="fixed right-6 bottom-6 bg-gradient-to-r from-blue-500 to-purple-500 text-white p-5 rounded-full shadow-2xl hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all duration-300 transform hover:scale-110 focus:outline-none"
-                    title="Open Chat"
-                >
-                    <svg
-                        className="w-7 h-7"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
+                    {/* Chat Toggle Button */}
+                    <button
+                        onClick={toggleChat}
+                        className="fixed right-6 bottom-6 bg-gradient-to-r from-blue-500 to-purple-500 text-white p-5 rounded-full shadow-2xl hover:shadow-[0_0_20px_rgba(59,130,246,0.5)] transition-all duration-300 transform hover:scale-110 focus:outline-none"
+                        title="Open Chat"
                     >
-                        <path
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                            strokeWidth="2"
-                            d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"
-                        />
-                    </svg>
-                </button>
-
-                {/* Chatbox */}
-                <div
-                    className={`fixed right-0 bottom-20 w-96 bg-gray-800 bg-opacity-90 backdrop-blur-md shadow-2xl rounded-l-2xl transform transition-transform duration-500 ${isChatOpen ? 'translate-x-0' : 'translate-x-full'
-                        }`}
-                >
-                    {/* Chat Header */}
-                    <div className="flex justify-between items-center p-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-tl-2xl">
-                        <div>
-                            <h2 className="text-lg font-semibold">Chat Assistant</h2>
-                            <p className="text-xs opacity-90">
-                                {pdfText ? `PDF loaded (${Math.round(pdfText.length / 1000)}k chars) ✅` : 'No PDF loaded'}
-                            </p>
-                        </div>
-                        <button
-                            onClick={toggleChat}
-                            className="focus:outline-none hover:bg-white hover:bg-opacity-20 p-2 rounded-full transition-colors"
-                            title="Close Chat"
+                        <svg
+                            className="w-7 h-7"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
                         >
-                            <svg
-                                className="w-5 h-5"
-                                fill="none"
-                                stroke="currentColor"
-                                viewBox="0 0 24 24"
-                                xmlns="http://www.w3.org/2000/svg"
-                            >
-                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
-                            </svg>
-                        </button>
-                    </div>
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth="2"
+                                d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+                        </svg>
+                    </button>
 
-                    {/* Chat Messages */}
-                    <div className="h-96 overflow-y-auto p-4 space-y-4 bg-gray-900 bg-opacity-80">
-                        {messages.map((message, index) => (
-                            <div
-                                key={index}
-                                className={`flex ${message.isUser ? 'justify-end' : 'justify-start'} animate-slide-in`}
-                            >
-                                <div
-                                    className={`max-w-xs p-3 rounded-xl whitespace-pre-wrap text-sm ${getMessageStyle(message)}`}
-                                >
-                                    {message.text}
-                                </div>
+                    {/* Chatbox */}
+                    <div
+                        className={`fixed right-0 bottom-20 w-96 bg-gray-800 bg-opacity-90 backdrop-blur-md shadow-2xl rounded-l-2xl transform transition-transform duration-500 ${isChatOpen ? 'translate-x-0' : 'translate-x-full'}`}
+                    >
+                        {/* Chat Header */}
+                        <div className="flex justify-between items-center p-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-tl-2xl">
+                            <div>
+                                <h2 className="text-lg font-semibold">Chat Assistant</h2>
+                                <p className="text-xs opacity-90">
+                                    {pdfText ? `PDF loaded (${Math.round(pdfText.length / 1000)}k chars) ✅` : 'No PDF loaded'}
+                                </p>
                             </div>
-                        ))}
+                            <button
+                                onClick={toggleChat}
+                                className="focus:outline-none hover:bg-white hover:bg-opacity-20 p-2 rounded-full transition-colors"
+                                title="Close Chat"
+                            >
+                                <svg
+                                    className="w-5 h-5"
+                                    fill="none"
+                                    stroke="currentColor"
+                                    viewBox="0 0 24 24"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                >
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" />
+                                </svg>
+                            </button>
+                        </div>
 
-                        {(isUploading || isLoading) && (
-                            <div className="flex justify-start">
-                                <div className="bg-gray-800 text-gray-200 shadow-md border border-gray-700 p-3 rounded-xl">
-                                    <div className="flex items-center space-x-2">
-                                        <div className="animate-spin h-4 w-4 border-2 border-blue-400 border-t-transparent rounded-full"></div>
-                                        <span className="text-sm">
-                                            {isUploading ? 'Processing PDF...' : 'AI is thinking...'}
-                                        </span>
+                        {/* Chat Messages */}
+                        <div className="h-96 overflow-y-auto p-4 space-y-4 bg-gray-900 bg-opacity-80">
+                            {messages.map((message, index) => (
+                                <div
+                                    key={index}
+                                    className={`flex ${message.isUser ? 'justify-end' : 'justify-start'} animate-slide-in`}
+                                >
+                                    <div
+                                        className={`max-w-xs p-3 rounded-xl whitespace-pre-wrap text-sm ${getMessageStyle(message)}`}
+                                    >
+                                        {message.text}
                                     </div>
                                 </div>
-                            </div>
-                        )}
+                            ))}
 
-                        <div ref={messagesEndRef} />
-                    </div>
+                            {(isUploading || isLoading) && (
+                                <div className="flex justify-start">
+                                    <div className="bg-gray-800 text-gray-200 shadow-md border border-gray-700 p-3 rounded-xl">
+                                        <div className="flex items-center space-x-2">
+                                            <div className="animate-spin h-4 w-4 border-2 border-blue-400 border-t-transparent rounded-full"></div>
+                                            <span className="text-sm">
+                                                {isUploading ? 'Processing PDF...' : 'AI is thinking...'}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            )}
 
-                    {/* Input and Upload */}
-                    <div className="p-4 border-t border-gray-700 bg-gray-800 rounded-bl-2xl">
-                        <div className="flex items-center space-x-2">
-                            <input
-                                type="file"
-                                accept="application/pdf"
-                                ref={fileInputRef}
-                                onChange={handleFileUpload}
-                                className="hidden"
-                                disabled={isUploading}
-                            />
-                            <button
-                                onClick={() => fileInputRef.current?.click()}
-                                disabled={isUploading || backendStatus !== 'connected'}
-                                className="bg-gray-700 p-2 rounded-full hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
-                                title="Upload PDF"
-                            >
-                                {isUploading ? (
-                                    <div className="animate-spin h-5 w-5 border-2 border-gray-300 border-t-transparent rounded-full"></div>
-                                ) : (
-                                    <svg
-                                        className="w-5 h-5 text-gray-300"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth="2"
-                                            d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12"
-                                        />
-                                    </svg>
-                                )}
-                            </button>
-                            <textarea
-                                value={input}
-                                onChange={(e) => setInput(e.target.value)}
-                                onKeyPress={handleKeyPress}
-                                disabled={isLoading || backendStatus !== 'connected'}
-                                className="flex-1 p-2 border border-gray-600 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 resize-none placeholder-gray-400"
-                                placeholder="Type your message..."
-                                rows="1"
-                                style={{ minHeight: '40px', maxHeight: '100px' }}
-                            />
-                            <button
-                                onClick={handleSendMessage}
-                                disabled={isLoading || !input.trim() || backendStatus !== 'connected'}
-                                className="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-2 rounded-full hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all"
-                                title="Send Message"
-                            >
-                                {isLoading ? (
-                                    <div className="animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full"></div>
-                                ) : (
-                                    <svg
-                                        className="w-5 h-5"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        viewBox="0 0 24 24"
-                                        xmlns="http://www.w3.org/2000/svg"
-                                    >
-                                        <path
-                                            strokeLinecap="round"
-                                            strokeLinejoin="round"
-                                            strokeWidth="2"
-                                            d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"
-                                        />
-                                    </svg>
-                                )}
-                            </button>
+                            <div ref={messagesEndRef} />
                         </div>
-                        {backendStatus !== 'connected' && (
-                            <p className="text-xs text-red-400 mt-2">
-                                Backend not connected. Check server status.
-                            </p>
-                        )}
+
+                        {/* Input and Upload */}
+                        <div className="p-4 border-t border-gray-700 bg-gray-800 rounded-bl-2xl">
+                            <div className="flex items-center space-x-2">
+                                <input
+                                    type="file"
+                                    accept="application/pdf"
+                                    ref={fileInputRef}
+                                    onChange={handleFileUpload}
+                                    className="hidden"
+                                    disabled={isUploading} />
+                                <button
+                                    onClick={() => fileInputRef.current?.click()}
+                                    disabled={isUploading || backendStatus !== 'connected'}
+                                    className="bg-gray-700 p-2 rounded-full hover:bg-gray-600 disabled:opacity-50 disabled:cursor-not-allowed transition-colors"
+                                    title="Upload PDF"
+                                >
+                                    {isUploading ? (
+                                        <div className="animate-spin h-5 w-5 border-2 border-gray-300 border-t-transparent rounded-full"></div>
+                                    ) : (
+                                        <svg
+                                            className="w-5 h-5 text-gray-300"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth="2"
+                                                d="M7 16a4 4 0 01-.88-7.903A5 5 0 1115.9 6L16 6a5 5 0 011 9.9M15 13l-3-3m0 0l-3 3m3-3v12" />
+                                        </svg>
+                                    )}
+                                </button>
+                                <textarea
+                                    value={input}
+                                    onChange={(e) => setInput(e.target.value)}
+                                    onKeyPress={handleKeyPress}
+                                    disabled={isLoading || backendStatus !== 'connected'}
+                                    className="flex-1 p-2 border border-gray-600 bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-50 resize-none placeholder-gray-400"
+                                    placeholder="Type your message..."
+                                    rows="1"
+                                    style={{ minHeight: '40px', maxHeight: '100px' }} />
+                                <button
+                                    onClick={handleSendMessage}
+                                    disabled={isLoading || !input.trim() || backendStatus !== 'connected'}
+                                    className="bg-gradient-to-r from-blue-500 to-purple-500 text-white p-2 rounded-full hover:shadow-lg disabled:opacity-50 disabled:cursor-not-allowed transition-all"
+                                    title="Send Message"
+                                >
+                                    {isLoading ? (
+                                        <div className="animate-spin h-5 w-5 border-2 border-white border-t-transparent rounded-full"></div>
+                                    ) : (
+                                        <svg
+                                            className="w-5 h-5"
+                                            fill="none"
+                                            stroke="currentColor"
+                                            viewBox="0 0 24 24"
+                                            xmlns="http://www.w3.org/2000/svg"
+                                        >
+                                            <path
+                                                strokeLinecap="round"
+                                                strokeLinejoin="round"
+                                                strokeWidth="2"
+                                                d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                                        </svg>
+                                    )}
+                                </button>
+                            </div>
+                            {backendStatus !== 'connected' && (
+                                <p className="text-xs text-red-400 mt-2">
+                                    Backend not connected. Check server status.
+                                </p>
+                            )}
+                        </div>
                     </div>
                 </div>
-            </div>
-            <style jsx>{`
+                <style jsx>{`
                 @keyframes fadeIn {
                     from { opacity: 0; transform: translateY(10px); }
                     to { opacity: 1; transform: translateY(0); }
@@ -566,7 +568,8 @@ export const Chatbot = () => {
                     animation: fadeIn 0.3s ease-out;
                 }
             `}</style>
-        </PdfContext.Provider>
+            </PdfContext.Provider>
+        </>
     );
 }
 export default Chatbot;
