@@ -432,4 +432,5 @@ if __name__ == '__main__':
         print("✅ Gemini API key configured")
     
     # IMPORTANT: Disable debug mode and reloader for production
-    app.run(debug=False, host='0.0.0.0', port=5000, use_reloader=False, threaded=True)
+    port = int(os.environ.get('PORT', 5000))
+    app.run(debug=False, host='0.0.0.0', port=port, use_reloader=False, threaded=True)
