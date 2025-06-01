@@ -2,8 +2,11 @@ services:
   - type: web
     name: hindi-pdf-extraction-api
     env: python
-    buildCommand: ""
-    startCommand: gunicorn app:app
+    buildCommand: |
+      apt-get update && \
+      apt-get install -y tesseract-ocr poppler-utils && \
+      pip install -r requirements.txt
+    startCommand: gunicorn app:app --bind 0.0.0.0:10000
     envVars:
       - key: GEMINI_API_KEY
-        sync: false # Set this in the Render dashboard
+        sync: false
