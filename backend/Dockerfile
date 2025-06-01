@@ -27,4 +27,5 @@ ENV FLASK_RUN_HOST=0.0.0.0
 ENV FLASK_RUN_PORT=5000
 
 # Command to run your Flask app with gunicorn
-CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:5000", "--workers", "2"]
+# CMD ["gunicorn", "app:app", "--bind", "0.0.0.0:5000", "--workers", "2"]
+CMD ["sh", "-c", "gunicorn app:app --bind 0.0.0.0:$PORT --workers 2"]
