@@ -67,6 +67,7 @@ function NavBar() {
                     <CustomLink href="/achievements" title={"Achievements"} className='mx-4' />
                     <CustomLink href="/ObjectDetection" title={"ObjectDetection"} className='mx-4' />
                     <CustomLink href="/contacts" title={"Contact Me"} className='mx-4' />
+                    <CustomLink href="/customBot" title={"Custom Bot"} className='mx-4' />
                 </nav>
 
                 <nav className='flex items-center justify-center flex-wrap'>

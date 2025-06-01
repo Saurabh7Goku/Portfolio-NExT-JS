@@ -20,7 +20,6 @@ function ObjectDetection() {
 
     const router = useRouter();
     const switchToVideoDetection = () => {
-
         router.push('/Obj');
     };
 

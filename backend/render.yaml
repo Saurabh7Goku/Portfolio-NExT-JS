@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: hindi-pdf-extraction-api
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    envVars:
+      - key: GEMINI_API_KEY
+        sync: false # Set this in the Render dashboard
