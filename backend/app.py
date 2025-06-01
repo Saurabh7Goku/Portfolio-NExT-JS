@@ -1,4 +1,4 @@
-import cv2
+# import cv2
 from dotenv import load_dotenv
 from flask import Flask, request, jsonify
 from flask_cors import CORS
@@ -70,10 +70,10 @@ def extract_text_ocr(file_path, task_id=None):
                 if task_id:
                     processing_status[task_id]["progress"] = f"Processing page {i+1}/{len(images)}"
                 
-                    image = cv2.imread('input_image.png')
-                    image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
-                    image = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
-                    image = cv2.GaussianBlur(image, (3, 3), 0)
+                    # image = cv2.imread('input_image.png')
+                    # image = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+                    # image = cv2.threshold(image, 0, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
+                    # image = cv2.GaussianBlur(image, (3, 3), 0)
 
                 # Optimized OCR configuration
                 page_text = pytesseract.image_to_string(
