@@ -18,7 +18,7 @@ import time
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
+CORS(app, resources={r"/*": {"origins": "*"}})  # Enable CORS for all routes
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
