@@ -1,7 +1,7 @@
 # import cv2
 from dotenv import load_dotenv
 from flask import Flask, request, jsonify
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 import io
 import os
 import tempfile
@@ -214,6 +214,7 @@ def health_check():
     })
 
 @app.route('/extract-pdf', methods=['POST'])
+@cross_origin()
 def extract_pdf():
     """Extract text from uploaded PDF file using OCR - Async version"""
     try:
@@ -432,5 +433,5 @@ if __name__ == '__main__':
         print("✅ Gemini API key configured")
     
     # IMPORTANT: Disable debug mode and reloader for production
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 10000))
     app.run(host="0.0.0.0", port=port)
