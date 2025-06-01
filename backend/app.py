@@ -188,6 +188,20 @@ Please answer the user's question based on the PDF context provided above. Pleas
         logger.error(f"Gemini API call failed: {str(e)}")
         return {"error": f"API call failed: {str(e)}"}
 
+@app.route('/', methods=['GET'])
+def index():
+    return jsonify({
+        "message": "Hindi PDF Extraction Server is running",
+        "endpoints": [
+            "GET /health",
+            "POST /extract-pdf",
+            "POST /extract-pdf-sync",
+            "GET /check-status/<task_id>",
+            "POST /chat",
+            "POST /test-gemini"
+        ]
+    })
+
 @app.route('/health', methods=['GET'])
 def health_check():
     """Health check endpoint"""
