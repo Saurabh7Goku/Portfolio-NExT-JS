@@ -20,8 +20,10 @@ export const Chatbot = () => {
     const messagesEndRef = useRef(null);
     const statusCheckInterval = useRef(null);
 
-    // Backend server URL - change this to your backend URL
-    const BACKEND_URL = 'https://portfolio-next-js-4ndf.onrender.com';
+    // Backend server URL - Render
+    // const BACKEND_URL = 'https://portfolio-next-js-4ndf.onrender.com';
+
+    const BACKEND_URL = 'http://127.0.0.1:8080';
 
     const toggleChat = () => setIsChatOpen(!isChatOpen);
 
