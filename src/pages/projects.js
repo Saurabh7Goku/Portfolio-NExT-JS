@@ -104,9 +104,9 @@ const projectsData = [
         image: '/images/projects/NUTRITION.jpg',
         description: "This is an Android Application build using flutter SDK in dart named SavantGen which is a personal AI Assistant and also contains feature of ATS Resume Scan. It can Detect Missing Keywords, Improvise the Content writing on the resume, Guide how to improve for targeted JOB's Positions. Contains an Admin Dashboard where Admin can control the User's trials or increases their attempts",
         techStack: 'Tech Stack: Python, LLMs, Agents, CrewAI, API, Gradio',
-        link: 'https://huggingface.co/spaces/Saurabhgk18/Nutritionist_AI',
+        link: 'https://health-analysis-rf7w-saurabh7gokus-projects.vercel.app/',
         video: 'https://firebasestorage.googleapis.com/v0/b/newtry-d602d.appspot.com/o/Nutrition-AI.mp4?alt=media&token=75229000-c38d-454a-807c-9b82df174bc5',
-        code: 'https://github.com/Saurabh7Goku/Nutritionist_AI'
+        code: 'https://github.com/Saurabh7Goku/health-analysis'
     },
     {
         id: 9,
